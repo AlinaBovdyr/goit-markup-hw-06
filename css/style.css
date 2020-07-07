@@ -213,13 +213,6 @@ a {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-
-  transform: scale(1);
-  transition: transform 250ms var(--cubic-function);
-}
-
-.hero-btn:hover {
-  transform: scale(1.1);
 }
 
 /* Особенности */
