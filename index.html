@@ -64,7 +64,7 @@
         <h1 class="contrast-title hero-title">
           Эффективные решения для вашего бизнеса
         </h1>
-        <a class="link hero-btn" href="">Заказать услугу</a>
+        <button class="btn">Заказать услугу</button>
       </section>
 
       <!-- Особенности -->
@@ -517,9 +517,16 @@
           </ul>
         </div>
 
-        <div class="mailing">
+        <form class="mailing">
           <p class="subtitle"><b>Подпишитесь на рассылку</b></p>
-        </div>
+          <input type="email" name="email" placeholder="E-mail" />
+          <button class="btn" type="submit">
+            Подписаться
+            <svg class="icon-send" width="24" height="24">
+              <use href="./images/sprite.svg#send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
   </body>

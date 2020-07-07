@@ -200,10 +200,17 @@ a {
   letter-spacing: 0.06em;
 }
 
-.hero-btn {
-  display: inline-block;
-  padding: 10px 32px;
+button.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+
+  min-width: 200px;
   border-radius: 4px;
+  border: 1px solid transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   color: var(--contrast-title-color);
@@ -213,6 +220,7 @@ a {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 /* Особенности */
@@ -469,6 +477,16 @@ a {
 .social-links-list .social-links:focus {
   color: var(--contrast-title-color);
   background-color: var(--accent-color);
+}
+
+.mailing .btn {
+  margin-left: 12px;
+  margin-right: 0;
+}
+
+.icon-send {
+  margin-left: 10px;
+  fill: var(--contrast-title-color);
 }
 
 /* 
