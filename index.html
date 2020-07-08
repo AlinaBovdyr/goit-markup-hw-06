@@ -475,8 +475,7 @@
         <address class="address">
           <!-- Логотип -->
           <a class="logo" href="./index.html" lang="en"
-            >Web
-            <span class="footer-logo">Studio</span>
+            >Web <span class="footer-logo">Studio</span>
           </a>
           г. Киев, пр-т Леси Украинки, 26
           <a class="link" href="mailto:info@example.com">info@example.com</a>
@@ -517,16 +516,23 @@
           </ul>
         </div>
 
-        <form class="mailing">
+        <div class="mailing">
           <p class="subtitle"><b>Подпишитесь на рассылку</b></p>
-          <input type="email" name="email" placeholder="E-mail" />
-          <button class="btn" type="submit">
-            Подписаться
-            <svg class="icon-send" width="24" height="24">
-              <use href="./images/sprite.svg#send"></use>
-            </svg>
-          </button>
-        </form>
+          <form class="subscribe">
+            <input
+              class="subscribe-input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+            <button class="btn" type="submit">
+              Подписаться
+              <svg class="icon-send" width="24" height="24">
+                <use href="./images/sprite.svg#send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
   </body>
