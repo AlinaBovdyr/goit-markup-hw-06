@@ -64,7 +64,7 @@
         <h1 class="contrast-title hero-title">
           Эффективные решения для вашего бизнеса
         </h1>
-        <button class="btn">Заказать услугу</button>
+        <button data-modal-open class="btn">Заказать услугу</button>
       </section>
 
       <!-- Особенности -->
@@ -468,6 +468,44 @@
           </ul>
         </div>
       </section>
+
+      <!-- Модальное окно -->
+      <div data-modal class="backdrop is-hidden">
+        <div class="modal">
+          <button data-modal-close>Закрыть</button>
+          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+          <form action="">
+            <div class="form-field">
+              <label>
+                <span>Имя</span>
+                <input type="text" name="name" />
+              </label>
+            </div>
+            <div class="form-field">
+              <label>
+                Телефон
+                <input type="tel" name="telephone" />
+              </label>
+            </div>
+            <div class="form-field">
+              <label>
+                Почта
+                <input type="email" name="email" />
+              </label>
+            </div>
+            <div class="comment-field">
+              <label>Комментарий</label>
+              <textarea
+                class="comment"
+                name="comment"
+                cols="12"
+                rows="4"
+                placeholder="Комментарий"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -522,7 +560,7 @@
             <input
               class="subscribe-input"
               type="email"
-              name="email"
+              name="email-sub"
               placeholder="E-mail"
             />
             <button class="btn" type="submit">
@@ -535,5 +573,20 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-modal-open]'),
+        closeModalBtn: document.querySelector('[data-modal-close]'),
+        modal: document.querySelector('[data-modal]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      function toggleModal() {
+        refs.modal.classList.toggle('is-hidden');
+      }
+    </script>
   </body>
 </html>
