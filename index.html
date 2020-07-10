@@ -472,37 +472,64 @@
       <!-- Модальное окно -->
       <div data-modal class="backdrop is-hidden">
         <div class="modal">
-          <button data-modal-close>Закрыть</button>
+          <button data-modal-close class="close-button">X</button>
           <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
           <form action="">
-            <div class="form-field">
-              <label>
-                <span>Имя</span>
-                <input type="text" name="name" />
-              </label>
-            </div>
-            <div class="form-field">
-              <label>
-                Телефон
-                <input type="tel" name="telephone" />
-              </label>
-            </div>
-            <div class="form-field">
-              <label>
-                Почта
-                <input type="email" name="email" />
-              </label>
-            </div>
+            <ul class="list">
+              <li class="modal-item">
+                <label class="form-field">
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="name"
+                    placeholder=" "
+                  />
+                  <span class="form-label">Имя</span>
+                </label>
+              </li>
+              <li class="modal-item">
+                <label class="form-field">
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="telephone"
+                    placeholder=" "
+                  />
+                  <span class="form-label">Телефон</span>
+                </label>
+              </li>
+              <li class="modal-item">
+                <label class="form-field">
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="email"
+                    placeholder=" "
+                  />
+                  <span class="form-label">Почта</span>
+                </label>
+              </li>
+            </ul>
             <div class="comment-field">
-              <label>Комментарий</label>
-              <textarea
-                class="comment"
-                name="comment"
-                cols="12"
-                rows="4"
-                placeholder="Комментарий"
-              ></textarea>
+              <label class="form-field">
+                <textarea
+                  class="comment"
+                  name="comment"
+                  placeholder=" "
+                ></textarea>
+                <span class="comment-label">Комментарий</span>
+              </label>
             </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="checkbox" />
+                <span
+                  >Соглашаюсь с рассылкой и принимаю
+                  <a class="link-agreement" href="">Условия договора</a></span
+                >
+              </label>
+            </div>
+            <button class="btn" type="submit">Отправить</button>
           </form>
         </div>
       </div>
