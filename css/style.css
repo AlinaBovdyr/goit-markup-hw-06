@@ -630,6 +630,10 @@ button.btn {
   box-shadow: 0 0 0 2px var(--accent-color);
 }
 
+.checkbox:checked:focus + .checkbox-label::before {
+  box-shadow: 0 0 0 2px var(--primary-title-color);
+}
+
 .link-agreement {
   position: relative;
   display: inline-block;
