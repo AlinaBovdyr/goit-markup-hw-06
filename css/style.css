@@ -626,8 +626,21 @@ button.btn {
 }
 
 .link-agreement {
-  text-decoration: underline;
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  
   color: var(--accent-color);
+}
+
+.link-agreement::after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 5px;
+  width: 100%;
+ 
+  border-top: 1px solid var(--accent-color);
 }
 
 /* Подвал */
