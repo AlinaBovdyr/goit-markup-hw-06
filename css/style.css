@@ -584,10 +584,7 @@ button.btn {
 
 .checkbox-field {
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  border: 1px solid transparent;
 
   margin-bottom: 30px;
 }
@@ -601,6 +598,11 @@ button.btn {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
 }
 
 .checkbox-label::before {
