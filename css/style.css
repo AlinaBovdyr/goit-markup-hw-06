@@ -767,9 +767,11 @@ button.btn {
 }
 
 .button {
+  display: inline-block;
   padding: 6px 22px;
   border: transparent;
   border-radius: 4px;
+  cursor: pointer;
 
   color: var(--primary-title-color);
   background-color: var(--secondary-background-color);
@@ -781,7 +783,7 @@ button.btn {
     box-shadow 250ms var(--cubic-function);
 }
 
-.button.active {
+.button.active{
   color: var(--contrast-title-color);
   background-color: var(--accent-color);
 }
