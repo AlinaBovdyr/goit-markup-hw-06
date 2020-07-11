@@ -468,13 +468,14 @@ button.btn {
 }
 
 .icon-modal {
+  color: #000000;
   fill: currentColor;
-  transition: fill 250ms var(--cubic-function);
+  transition: color 250ms var(--cubic-function);
 }
 
 .close-button:hover .icon-modal,
 .close-button:focus-within .icon-modal {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .modal-title {
