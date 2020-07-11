@@ -446,6 +446,10 @@ button.btn {
   top: 8px;
   right: 8px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -453,6 +457,15 @@ button.btn {
   background-color: var(--contrast-title-color);
 
   cursor: pointer;
+}
+
+.icon-modal {
+  fill: currentColor;
+  transition: fill 250ms var(--cubic-function);
+}
+
+.close-button:hover .icon-modal {
+  fill: var(--accent-color);
 }
 
 .modal-title {
@@ -485,6 +498,10 @@ button.btn {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: borger-color 250ms var(--cubic-function);
+    
+  cursor: pointer;
 }
 
 .form-label {
@@ -492,12 +509,37 @@ button.btn {
   top: 50%;
   transform: translate(42px, -50%);
 
-  transition: all 250ms var(--cubic-function);
+  transition: color 250ms var(--cubic-function),
+    transform 250ms var(--cubic-function);
+}
+
+.form-field:focus-within .form-input,
+.form-field:focus-within .comment {
+  border-color: var(--accent-color);
+  outline: none;
 }
 
 .form-field:focus-within .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
   transform: translate(16px, -40px);
+  color: var(--accent-color);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(16px, -50%);
+
+  width: 18px;
+  height: 18px;
+
+  color: var(--primary-title-color);
+  fill: currentColor;
+
+  transition: color 250ms var(--cubic-function);
+}
+
+.form-field:focus-within .form-icon {
   color: var(--accent-color);
 }
 
@@ -507,12 +549,9 @@ button.btn {
 
 .comment {
   resize: none;
-  padding: 12px 16px;
+  padding-right: 16px;
 
   height: 120px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 }
 
 .comment-label {
