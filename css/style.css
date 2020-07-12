@@ -777,6 +777,10 @@ button.btn {
   margin-bottom: 50px;
 }
 
+.filters-item {
+  display: inline-block;
+}
+
 .button,
 .portfolio .link {
   font-family: 'Roboto', sans-serif;
@@ -790,7 +794,7 @@ button.btn {
   display: block;
 }
 
-.button {
+.button-label {
   display: inline-block;
   padding: 6px 22px;
   border: transparent;
@@ -807,22 +811,17 @@ button.btn {
     box-shadow 250ms var(--cubic-function);
 }
 
-.button.active{
-  color: var(--contrast-title-color);
-  background-color: var(--accent-color);
-}
-
-.filters-item + .filters-item {
-  margin-left: 8px;
-}
-
-.button.active,
-.button:hover,
-.button:focus {
+.click:checked + .button-label,
+.filters-item:hover .button-label,
+.filters-item:focus .button-label {
   color: var(--contrast-title-color);
   background-color: var(--accent-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.filters-item + .filters-item {
+  margin-left: 8px;
 }
 
 .cards-list {
